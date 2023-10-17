@@ -58,17 +58,26 @@
           <div class="sign-up-form__illustration"></div>
         </div>
       </div>
-
       <!-- Sign-up form end -->
-
       <!-- Success message start -->
-
-      <!-- Thanks for subscribing! A confirmation email has been sent to
-      ash@loremcompany.com. Please open it and click the button inside to
-      confirm your subscription. Dismiss message -->
+      <div class="success-message hidden">
+        <div class="content">
+          <img
+            src="./assets/images/icon-success.svg"
+            alt=""
+            class="success__icon"
+          />
+          <h1 class="success__title">Thanks for subscribing!</h1>
+          <p class="success__text">
+            A confirmation email has been sent to
+            <strong id="userEmail">User Email</strong>. Please open it and click
+            the button inside to confirm your subscription.
+          </p>
+        </div>
+        <button class="success__button">Dismiss message</button>
+      </div>
 
       <!-- Success message end -->
-
       <div class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
@@ -77,5 +86,6 @@
         <a href="https://github.com/Ilya-hb" target="_blank">Holuban Ilya</a>.
       </div>
     </main>
+    <script src="./index.js"></script>
   </body>
 </html>
