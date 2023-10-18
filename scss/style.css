@@ -46,8 +46,10 @@ body p {
   font-size: 1rem;
 }
 .button:hover, .success-message .success__button:hover, .container .sign-up-form .form__submit:hover {
+  transition: all 0.5s;
   background: rgb(255, 80, 118);
   background: linear-gradient(90deg, rgb(255, 80, 118) 0%, rgb(255, 105, 62) 100%);
+  box-shadow: 0px 10px 25px 0px rgba(255, 98, 87, 0.35);
 }
 
 .container {
@@ -95,7 +97,7 @@ body p {
   font-size: 0.7rem;
 }
 .container .sign-up-form .form .label-container__error {
-  color: hsl(4, 100%, 67%);
+  color: rgb(255, 98, 87);
 }
 .container .sign-up-form .form__input {
   padding: 17px;
@@ -110,15 +112,15 @@ body p {
   outline: none;
 }
 .container .sign-up-form .form__input_error {
-  border: 1px solid hsl(4, 100%, 67%);
+  border: 1px solid rgb(255, 98, 87);
   background-color: hsla(4, 100%, 67%, 0.171);
-  color: hsl(4, 100%, 67%);
+  color: rgb(255, 98, 87);
 }
 .container .sign-up-form .form__input_error::-moz-placeholder {
-  color: hsl(4, 100%, 67%);
+  color: rgb(255, 98, 87);
 }
 .container .sign-up-form .form__input_error::placeholder {
-  color: hsl(4, 100%, 67%);
+  color: rgb(255, 98, 87);
 }
 .container .sign-up-form__list {
   list-style-type: none;
@@ -148,7 +150,7 @@ body p {
   font-size: 1.3rem;
 }
 .container .attribution a {
-  color: hsl(4, 100%, 67%);
+  color: rgb(255, 98, 87);
   text-decoration: none;
 }
 .container .attribution a:hover {
