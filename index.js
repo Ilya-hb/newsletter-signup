@@ -1,18 +1,33 @@
-const selectors = {
-  successMessage: document.querySelector(".success-message"),
-  signUpForm: document.querySelector(".sign-up-form"),
-  successButton: document.querySelector(".success__button"),
-  signUpButton: document.querySelector(".form__submit"),
-};
+const successMessage = document.querySelector(".success-message");
+const signUpForm = document.querySelector(".sign-up-form");
+const successButton = document.querySelector(".success__button");
+const signUpButton = document.querySelector(".form__submit");
+const inputMail = document.querySelector("#email");
+const errorLabel = document.querySelector("#error-label");
+const successMessageMail = document.querySelector("#userEmail");
 
-selectors.signUpButton.addEventListener("click", () => {
-  //email validation
+signUpButton.addEventListener("click", () => {
+  const email = inputMail.value;
 
-  selectors.signUpForm.classList.add("hidden");
-  selectors.successMessage.classList.remove("hidden");
+  if (validateEmail(email)) {
+    signUpForm.classList.add("hidden");
+    successMessage.classList.remove("hidden");
+    errorLabel.classList.add("hidden");
+    inputMail.classList.remove("form__input_error");
+    successMessageMail.innerHTML = email;
+    console.log(successMessageMail);
+  } else {
+    inputMail.classList.add("form__input_error");
+    errorLabel.classList.remove("hidden");
+  }
 });
 
-selectors.successButton.addEventListener("click", () => {
-  selectors.successMessage.classList.add("hidden");
-  selectors.signUpForm.classList.remove("hidden");
+successButton.addEventListener("click", () => {
+  successMessage.classList.add("hidden");
+  signUpForm.classList.remove("hidden");
 });
+
+function validateEmail(email) {
+  const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+  return emailRegex.test(email);
+}

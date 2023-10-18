@@ -85,10 +85,17 @@ body p {
   display: flex;
   flex-direction: column;
 }
-.container .sign-up-form .form label {
+.container .sign-up-form .form .label-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.container .sign-up-form .form .label-container label {
   font-weight: 700;
   font-size: 0.7rem;
-  margin: 10px 0;
+}
+.container .sign-up-form .form .label-container__error {
+  color: hsl(4, 100%, 67%);
 }
 .container .sign-up-form .form__input {
   padding: 17px;
@@ -100,7 +107,18 @@ body p {
   color: hsl(234, 29%, 20%);
 }
 .container .sign-up-form .form__input:focus {
-  border: 1px solid hsl(234, 29%, 20%);
+  outline: none;
+}
+.container .sign-up-form .form__input_error {
+  border: 1px solid hsl(4, 100%, 67%);
+  background-color: hsla(4, 100%, 67%, 0.171);
+  color: hsl(4, 100%, 67%);
+}
+.container .sign-up-form .form__input_error::-moz-placeholder {
+  color: hsl(4, 100%, 67%);
+}
+.container .sign-up-form .form__input_error::placeholder {
+  color: hsl(4, 100%, 67%);
 }
 .container .sign-up-form__list {
   list-style-type: none;

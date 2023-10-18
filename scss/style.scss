@@ -90,10 +90,17 @@ body {
     .form {
       display: flex;
       flex-direction: column;
-      label {
-        font-weight: 700;
-        font-size: 0.7rem;
-        margin: 10px 0;
+      .label-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        label {
+          font-weight: 700;
+          font-size: 0.7rem;
+        }
+        &__error {
+          color: $pimary-color;
+        }
       }
       &__input {
         padding: 17px;
@@ -104,7 +111,15 @@ body {
         outline: none;
         color: $dark-slate-grey;
         &:focus {
-          border: 1px solid $dark-slate-grey;
+          outline: none;
+        }
+      }
+      &__input_error {
+        border: 1px solid $pimary-color;
+        background-color: hsla(4, 100%, 67%, 0.171);
+        color: $pimary-color;
+        &::placeholder {
+          color: $pimary-color;
         }
       }
       &__submit {
