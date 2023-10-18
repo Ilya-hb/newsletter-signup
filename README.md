@@ -14,5 +14,5 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [click](https://your-solution-url.com)
+- Solution URL: [click](https://www.frontendmentor.io/solutions/responsive-form-with-user-email-validation-xydMImdLUx)
 - Live Site URL: [click](https://newsletter-form-scss-ilyholu.netlify.app/)
